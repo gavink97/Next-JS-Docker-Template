@@ -1,0 +1,26 @@
+version: "3"
+services:
+
+  next:
+    image: gavink97/dockerizednext:prod
+    container_name: next
+    restart: unless-stopped
+    environment:
+      - TZ=${TZ}
+    expose:
+      - 3000
+    ports:
+      - 3000:3000
+    networks:
+      - backend
+    #healthcheck:
+    #test: [ "CMD", "curl", "-f", "http://nginx/ping" ]
+    #interval: 180s
+    #timeout: 30s
+    #retries: 5
+    #start_period: 10s
+
+networks:
+  backend:
+    name: backend
+    driver: bridge

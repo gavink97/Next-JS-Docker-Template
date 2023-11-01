@@ -1,0 +1,7 @@
+version: "3"
+services:
+
+  next:
+    image: gavink97/dockerizednext:dev
+    volumes:
+      - ${PWD}/next:/web

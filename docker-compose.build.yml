@@ -1,0 +1,22 @@
+version: "3"
+services:
+
+  next-prod:
+    image: gavink97/dockerizednext:prod
+    build:
+      context: ${PWD}/next
+      dockerfile: Dockerfile.production
+      x-bake:
+        platforms:
+          - linux/amd64
+          - linux/arm64
+
+  next-dev:
+    image: gavink97/dockerizednext:dev
+    build:
+      context: ${PWD}/next
+      dockerfile: Dockerfile
+      x-bake:
+        platforms:
+          - linux/amd64
+          - linux/arm64
