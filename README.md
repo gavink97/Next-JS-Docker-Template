@@ -53,6 +53,16 @@ PWD = /../path/to/your/project
 ```
 ## How to build this image
 
+### For Development
+
+Use docker-compose-local.yml to build the development version of your next app
+
+```
+docker compose -f docker-compose-local.yml build name
+```
+
+### For Production
+
 This template uses Docker Buildx to create AMD64 + ARM64 images of your Next project.
 
 _I would recommend only pushing your production ready services to docker hub._

@@ -10,13 +10,3 @@ services:
         platforms:
           - linux/amd64
           - linux/arm64
-
-  next-dev:
-    image: gavink97/dockerizednext:dev
-    build:
-      context: ${PWD}/next
-      dockerfile: Dockerfile
-      x-bake:
-        platforms:
-          - linux/amd64
-          - linux/arm64
