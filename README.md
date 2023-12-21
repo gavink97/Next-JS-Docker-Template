@@ -72,7 +72,7 @@ _I would recommend only pushing your production ready services to docker hub._
 ```
 # To build locally use:
 
-docker buildx bake -f docker-compose.build.yml
+docker buildx bake -f docker-compose.build.yml --load
 
 # append the "--push" flag to build + push to docker hub
 
